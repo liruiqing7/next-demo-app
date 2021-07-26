@@ -2,16 +2,20 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import styled from 'styled-components'
+import { useState } from 'react'
 
 const Styled = styled.div`
   height:100px;
 `
 
 export default function Home() {
+
+  const [type, setType] = useState<string>('')
+
   return (
     <div className={styles.container}>
       <Styled>
-        123
+        {type}
       </Styled>
       <Head>
         <title>Create Next App</title>
